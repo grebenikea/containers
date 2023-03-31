@@ -16,21 +16,23 @@ int main() {
         }
         else
         {
-            if(s[i] == ')' && !p.empty() && p.top() == '(') {
+            if(s[i] == ')' && !p.empty() && p.top() == '(') 
+            {
                 p.pop();
             }
-            else if (s[i] == '}' && !p.empty() && p.top() == '{') {
+            else if (s[i] == '}' && !p.empty() && p.top() == '{') 
+            {
                 p.pop();
             }
-            else if ((s[i] == '}' || s[i] == ')') && p.empty()) {
+            else if ((s[i] == '}' || s[i] == ')') && p.empty()) 
+            {
                 p.push(i);
                 break;
         	}
         }
     }
-    if(p.empty()){
+    if(p.empty())
         cout << "YES\n";
-    }else{
+    else
         cout << "NO\n";
-    }
 }
